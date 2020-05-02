@@ -11,10 +11,11 @@ body {
     margin: 0;
     font-family: $body-font;
     color: $text-color-light;
+    background-color: $bg-ligth;
     padding: 10px;
     scrollbar-width: none;
     will-change: filter;
-    max-width: 1500px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -38,6 +39,7 @@ h2{
 
 p{
     line-height: normal;
+    font-size: 1rem;
 }
 
 a{
@@ -70,12 +72,23 @@ header, section{
 }
 
 section{
-    padding-top: 15vh !important;
+    padding-top: 5vh !important;
     padding-bottom: 15vh !important;
     padding: 30px;
     position: relative;
     margin: 0 auto;
     clear:both;
+}
+
+#greeting{
+    padding-top: 20vh !important;
+}
+
+#about{
+    .column {
+        
+        padding-right: 40px;
+    }
 }
 
 .row {
@@ -97,8 +110,28 @@ section{
 
 
 @media screen and (max-width: 600px) {
+
+    html{
+        font-size: 12px;
+    }
+
+    header, footer, section{
+        padding: 10px !important;
+    }
     section{
         width: 100%;
+        padding-bottom: 10vh !important;
+    }
+
+    h2{
+        font-size: 1rem;
+        font-weight: 400;
+        color: $text-color-light-fade;
+        margin-bottom: 15px;
+    }
+
+    #greeting{
+        padding-top: 25vh;
     }
     .column {
         -ms-flex: 100%; 
