@@ -9,7 +9,8 @@ html{
   
 body {
     margin: 0;
-    font-family: 'Karla', sans-serif;
+    font-family: $body-font;
+    color: $text-color-light;
     padding: 10px;
     scrollbar-width: none;
     will-change: filter;
@@ -22,27 +23,74 @@ body {
 }
 
 h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-align: left;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 1rem;
+    font-weight: 400;
+    color: $text-color-light-fade;
+    margin-bottom: 30px;
 }
 
 p{
     line-height: normal;
 }
 
+a{
+    text-decoration: none;
+    color: $link-color-light;
+    cursor: ne-resize;
+    transition: all 0.1s;
+}
+
+a:hover{
+    color: $hover-link-color-light;
+    text-decoration: underline;
+    -webkit-text-decoration-color: $hover-link-color-light; /* Safari */  
+      text-decoration-color: $hover-link-color-light;
+}
+
+ul{
+
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+    li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 header, section{
-    min-height: 30vh;
     padding: 30px;
 }
 
 section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    width: 80%;
+    padding-top: 15vh !important;
+    padding-bottom: 15vh !important;
+    padding: 30px;
     position: relative;
     margin: 0 auto;
     clear:both;
+}
+
+.row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0;
+}
+  
+.column {
+    -ms-flex: 50%; 
+    flex: 50%;
+    max-width: 50%;
+    padding: 0;
 }
 
 
@@ -51,5 +99,11 @@ section{
 @media screen and (max-width: 600px) {
     section{
         width: 100%;
+    }
+    .column {
+        -ms-flex: 100%; 
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 10px;
     }
 }

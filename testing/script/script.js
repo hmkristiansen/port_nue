@@ -2,16 +2,11 @@ var showWork = false;
 
 window.addEventListener("scroll", function (event) {
 
-    let scroll = this.scrollY;
-
-    let windowHeight = this.innerHeight;
-
-    let workHeight = document.getElementById("work").clientHeight;
-
-    let workDistanceTop = document.getElementById("work").offsetTop;
-
-    let delta = workDistanceTop - scroll;
-
+    let scroll = this.scrollY,
+        windowHeight = this.innerHeight;
+        workHeight = document.getElementById("work").clientHeight;
+        workDistanceTop = document.getElementById("work").offsetTop;
+        delta = workDistanceTop - scroll;
 
     if(delta > 0){
         if( (delta < (windowHeight/2)) && !showWork){
