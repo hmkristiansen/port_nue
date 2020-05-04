@@ -1,3 +1,9 @@
+
+function fadeInPage(){
+    $('body').removeClass('loadHide');
+}
+
+
 var showWork = false;
 
 window.addEventListener("scroll", function (event) {
@@ -62,33 +68,3 @@ function hidePort(delta){
     showWork = false;
 }
 
-var update = setInterval(function() {
-	updateAge();
-}, 500);
-
-var bday = new Date("Nov 19, 1996 05:55:25").getTime();
-var dday = new Date("Nov 19, 2077 12:00:00").getTime();
-
-function updateAge(){
-	let now = new Date().getTime(); 
-	let diffTime1 = Math.abs(now - bday);
-	let diffTime2 = Math.abs(dday - now);
-	document.getElementById("age").innerHTML =(diffTime1/31557600000);
-	//document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
-}
-
-
-$( "#work img" ).click(function() {
-    $('#overlay').removeClass('hidden');
-    $('#overlay').addClass('visible');
-    $('body').addClass('noScroll');
-    $('#work, header ,footer').addClass('blur');
-    console.log(this.id);
-});
-
-$( "#close_btn" ).click(function() {
-    $('#overlay').addClass('hidden');
-    $('#overlay').removeClass('visible');
-    $('body').removeClass('noScroll');
-    $('#work, header ,footer').removeClass('blur');
-});

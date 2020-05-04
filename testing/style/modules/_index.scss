@@ -15,12 +15,21 @@ body {
     padding: 10px;
     scrollbar-width: none;
     will-change: filter;
+    overflow-x: hidden;
     max-width: 1600px;
-    margin: 0 auto;
+    margin: 0 auto !important;
+
+    transition: all 1s;
+    opacity: 1;
 }
 
 .body::-webkit-scrollbar {
     display: none;
+}
+
+.loadHide{
+    transition: all 1s;
+    opacity: 0;
 }
 
 h1{
