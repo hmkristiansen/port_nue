@@ -58,7 +58,7 @@ a{
     transition: all 0.1s;
 }
 
-a:hover{
+body.non-touch a:hover{
     color: $hover-link-color-light;
     text-decoration: underline;
     -webkit-text-decoration-color: $hover-link-color-light; /* Safari */  
@@ -80,9 +80,10 @@ header, section{
     padding: 30px;
 }
 
+
 section{
-    padding-top: 5vh !important;
-    padding-bottom: 15vh !important;
+    padding-top: 10vh !important;
+    padding-bottom: 10vh !important;
     padding: 30px;
     position: relative;
     margin: 0 auto;
@@ -95,9 +96,9 @@ section{
 
 #about{
     .column {
-        
         padding-right: 40px;
     }
+    padding-bottom: 15vh !important;
 }
 
 .row {
@@ -114,8 +115,6 @@ section{
     max-width: 50%;
     padding: 0;
 }
-
-
 
 
 @media screen and (max-width: 600px) {

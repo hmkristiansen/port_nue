@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     z-index: 1000;
 
@@ -26,11 +26,6 @@
         cursor: pointer !important;
 
         z-index: 1001;
-    }
-
-    
-    #close_btn:hover{
-        background-color: $hover-bg-ligth-btn;
     }
 
     #content{
@@ -96,6 +91,7 @@
 
     } 
 
+    /*
     #more_link{
         padding-top: 30px;
         padding-bottom: 50px;
@@ -115,19 +111,16 @@
             background-color: $bg-ligth-btn;
         }
 
-        #notion_link:hover{
+        body.non-touch #notion_link:hover{
             background-color: $hover-bg-ligth-btn;
         }
     }
+    */
 
-    a{
-        text-decoration: none;
-        opacity: 1 !important;
-    }
+}
 
-    a:hover{
-        text-decoration: none;
-    }
+body.non-touch #close_btn:hover{
+    background-color: $hover-bg-ligth-btn;
 }
 
 .hidden{
@@ -144,18 +137,11 @@
 }
 
 .noScroll{
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 
 .hideCloseBtn{
-    /*
-    -moz-transform: rotate(180deg) translate(15px, 0px);
-    -webkit-transform: rotate(180deg) translate(15px, 0px);
-    -o-transform: rotate(180deg) translate(15px, 0px);
-    -ms-transform: rotate(180deg) translate(15px, 0px);
-    transform: rotate(180deg) translate(15px, 0px);
-    */
     -moz-transform: rotate(180deg) scale(0.8);
     -webkit-transform: rotate(180deg) scale(0.8);
     -o-transform: rotate(180deg) scale(0.8);
@@ -164,13 +150,7 @@
 }
 
 .blur{
-
     transition: all 0.2s;
-    /*
-    -moz-filter:blur(5px);
-    -o-filter:blur(5px);
-    -webkit-filter:blur(5px);
-    filter:blur(5px);*/
     opacity: 0.1;
 }
 
@@ -178,7 +158,20 @@
     filter: brightness(50%);
 }
 
+@media screen and (max-width: 1000px){
+
+    .blur{
+        -moz-filter:blur(5px);
+        -o-filter:blur(5px);
+        -webkit-filter:blur(5px);
+        filter:blur(5px);
+    }
+
+}
+
 @media screen and (max-width: 600px) {
+
+
     #overlay{
 
         #content{
